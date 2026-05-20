@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <!-- Login Card -->
+    <section class="w-[420px] bg-white rounded-3xl shadow-2xl px-10 py-12 flex flex-col items-center">
+
+        <!-- Icon -->
+        <div class="mb-6">
+            <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-2xl shadow-sm">
+                <img src="./images/locked.png" alt="lock icon" class="w-8">
+            </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-gray-900">
+                Welcome Back
+            </h1>
+            <p class="text-gray-500 mt-2">
+                Enter your credentials to access your account
+            </p>
+        </div>
+
+        <!-- Form -->
+        <form action="" class="w-full flex flex-col gap-6">
+
+            <!-- Email -->
+            <div class="flex flex-col gap-2">
+                <label for="email" class="font-bold text-gray-800">
+                    Email Address
+                </label>
+
+                <input type="email" id="email" placeholder="name@company.com"
+                    class="w-full border border-gray-200 bg-gray-50 rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Password -->
+            <div class="flex flex-col gap-2">
+                <label for="password" class="font-bold text-gray-800">
+                    Password
+                </label>
+
+                <input type="password" id="password" placeholder="••••••••"
+                    class="w-full border border-gray-200 bg-gray-50 rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Remember + Forgot -->
+            <div class="flex items-center justify-between text-sm">
+
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="remember" class="w-4 h-4 rounded border-gray-300">
+                    <label for="remember" class="text-gray-600">
+                        Remember me
+                    </label>
+                </div>
+
+                <a href="#" class="text-blue-600 font-semibold hover:underline">
+                    Forgot password?
+                </a>
+            </div>
+
+            <!-- Button -->
+            <button type="submit"
+                class="bg-blue-600 hover:bg-blue-700 transition duration-300 text-white font-bold text-lg rounded-xl py-4 shadow-lg">
+                Log In →
+            </button>
+
+        </form>
+
+        <!-- Footer -->
+        <div class="mt-8 text-sm text-gray-500">
+            Don't have an account yet?
+            <a href="registration.html" class="text-blue-600 font-bold hover:underline">
+                Sign up for free
+            </a>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
