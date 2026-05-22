@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuietMind Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f2ed;
+        }
+
+        .card-shadow {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+    </style>
+</head>
+
+<body class="bg-[#f5f2ed] ">
+
+    <div class="flex min-h-screen w-full">
+
+        <aside
+            class="hidden lg:flex flex-col justify-between w-[250px] bg-white px-6 py-6 border-r border-[#ded8d0] h-screen  sticky top-0">
+
+            <div>
+                <div class="flex items-center gap-3 mb-5">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D9E6D8] flex items-center justify-center">
+                        <span class="text-[#3C5A40] text-xl">🍃</span>
+                    </div>
+
+                    <div>
+                        <h1 class="text-[30px] font-semibold text-[#2E4632] leading-none">
+                            QuietMind
+                        </h1>
+                        <p class="text-[#8A8A8A] text-sm">
+                            Beginner's Haven
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    class="w-full bg-[#456648] hover:bg-[#3d5a40] text-white py-4 rounded-full font-medium flex items-center justify-center gap-3 transition">
+                    <span class="text-xl">+</span>
+                    New Note
+                </button>
+
+                <div class="mt-10">
+                    <p class="text-xs tracking-[3px] uppercase text-[#9E9E9E] mb-5">
+                        Library
+                    </p>
+
+                    <div class="space-y-2">
+
+                        <div class="bg-[#A7BEA5] rounded-lg px-4 py-3 flex items-center gap-3 text-[#304532]">
+                            📄
+                            <span class="font-medium">Notes</span>
+                        </div>
+
+                        <div
+                            class="px-4 py-3 flex items-center gap-3 text-[#505050] hover:bg-white rounded-lg transition">
+                            📁
+                            <span>Categories</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mt-14">
+                    <p class="text-xs tracking-[3px] uppercase text-[#9E9E9E] mb-5">
+                        Favorites
+                    </p>
+
+                    <div class="space-y-4 text-[#666]">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[#506D53]"></div>
+                            Personal
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[#8FB28D]"></div>
+                            Creative Work
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-5 text-[#5C5C5C]">
+
+                <div class="flex items-center gap-3">
+                    ⚙️ Settings
+                </div>
+
+                <div class="flex items-center gap-3">
+                    🗂️ Archive
+                </div>
+
+                <div class="flex items-center gap-3">
+                    ❓ Help
+                </div>
+
+            </div>
+        </aside>
+
+        <main class="flex-1 min-h-screen">
+
+            <header class="sticky top-0 z-20 bg-white/65 backdrop-blur-lg border-b border-sage-100/40">
+                <div class="flex items-center justify-between px-8 py-4">
+
+                    <!-- SEARCH -->
+                    <div class="flex-1 max-w-xl relative">
+
+                        <!-- Icon -->
+                        <i
+                            class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-sage-400 text-sm"></i>
+
+                        <!-- Input -->
+                        <input type="text" placeholder="Search your thoughts..."
+                            class="w-full bg-sage-50/60 border border-sage-200/50 rounded-full py-2.5 pl-11 pr-5 text-sm text-sage-700 placeholder:text-sage-400 focus:outline-none focus:border-sage-300 focus:ring-[3px] focus:ring-sage-400/20 transition-all duration-300" />
+
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="flex items-center gap-4 ml-6">
+
+                        <button class="text-[#4A654D] font-medium flex items-center gap-2">
+                            +
+                            New Note
+                        </button>
+
+                        <img src="./images/lana.jpg" class="w-11 h-11 rounded-full object-cover" />
+
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="px-8 py-8 w-full">
+
+                <section class="mb-8 ">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h1 class="font-serif text-5xl font-bold text-[#456648] leading-tight tracking-tight mb-2">
+                                Good morning, Julian.
+                            </h1>
+
+                            <p class="text-[#456648] text-lg font-normal leading-relaxed">
+                                Take a breath. What's on your mind today?
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-2 mt-3">
+                            <button
+                                class="bg-[#ECE7E1] text-[#555] font-medium text-sm py-2 px-4 rounded-full shadow-soft transition-all duration-200">
+                                ☰ Recent
+                            </button>
+
+                            <button
+                                class="bg-[#ECE7E1] text-[#555] font-medium text-sm py-2 px-4 rounded-full shadow-soft transition-all duration-200">
+                                ⬚ Layout
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                    <div class="xl:col-span-2 bg-[#EFECE7] rounded-3xl p-8 card-shadow">
+
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="bg-[#E1E6EB] text-[#4D5966] text-sm px-4 py-1 rounded-full">
+                                Creative Work
+                            </span>
+
+                            <span class="text-sm text-[#777]">
+                                • 2 hours ago
+                            </span>
+                        </div>
+
+
+                        <h2 class="text-4xl font-medium mt-8 leading-tight text-[#1F1F1F]">
+                            The Philosophy of Quiet Productivity
+                        </h2>
+
+                        <p class="text-[#777] leading-8 mt-6 text-lg">
+                            In a world that never stops shouting, there is a profound power in
+                            finding silence. This morning I'm reflecting on how we can build
+                            tools that don't demand attention, but rather reward it...
+                        </p>
+
+                        <div class="flex flex-wrap gap-3 mt-10">
+                            <span class="bg-[#F6F3EE] px-4 py-1 rounded-full text-sm">
+                                #mindfulness
+                            </span>
+
+                            <span class="bg-[#F6F3EE] px-4 py-1 rounded-full text-sm">
+                                #design-ethics
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-6 card-shadow">
+                        <div class="flex items-center justify-between">
+                            <span class="bg-[#E4EEE2] text-[#48664C] px-3 py-1 rounded-full text-sm">
+                                Ideas
+                            </span>
+                            📌
+                        </div>
+
+                        <h3 class="text-3xl mt-5 font-medium">
+                            Morning Ritual Ideas
+                        </h3>
+
+                        <ol class="mt-6 mb-8 space-y-3 text-[#666] leading-7">
+                            <li>1. Cold water therapy</li>
+                            <li>2. 5 minutes of focused breathing</li>
+                            <li>3. Tea ceremony without screens...</li>
+                        </ol>
+
+
+                        <span class="bg-[#F5F2ED] px-3 py-1 rounded-full text-sm">
+                            #wellness
+                        </span>
+
+                    </div>
+
+                    <div class="bg-[#EFECE7] rounded-3xl overflow-hidden card-shadow">
+
+                        <img src="./images/office.avif" class="h-48 w-full object-cover" />
+
+                        <div class="p-6">
+
+                            <span class="bg-[#DCE7EF] px-3 py-1 rounded-full text-sm">
+                                Work
+                            </span>
+                            <h3 class="text-3xl font-medium mt-5">
+                                Office Redesign Notes
+                            </h3>
+                            <p class="text-[#666] leading-8 mt-4">
+                                Need to prioritize ergonomic comfort and natural light diffusio...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="bg-[#F1EFEF] rounded-3xl p-6 card-shadow">
+
+                        <span class="bg-[#ECE7E7] px-3 py-1 rounded-full text-sm">
+                            Personal
+                        </span>
+
+                        <h3 class="text-3xl mt-6 font-medium">
+                            Weekend Grocery List
+                        </h3>
+
+                        <ul class="mt-5 space-y-3 text-[#678065] text-lg">
+                            <li>• Fresh ginger & mint</li>
+                            <li>• Organic honey</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="bg-[#F5F3F2] rounded-3xl p-6 card-shadow">
+
+                        <div class="flex items-center justify-between">
+
+                            <span class="bg-[#E6EBF2] px-3 py-1 rounded-full text-sm">
+                                Work
+                            </span>
+
+                            <span class="text-[#888] text-sm">
+                                Mar 12
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-3xl mt-6 font-medium">
+                            Project Alpha Review
+                        </h3>
+
+                        <p class="mt-5 text-[#666] leading-8">
+                            The feedback from the initial user group was surprisingly positive
+                            regarding the soft-focus UI...
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+
+</html>
